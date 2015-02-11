@@ -45,15 +45,15 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(93, 38);
+            this.txtMessage.Location = new System.Drawing.Point(83, 38);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(239, 81);
+            this.txtMessage.Size = new System.Drawing.Size(287, 131);
             this.txtMessage.TabIndex = 2;
             this.txtMessage.Text = "";
             // 
             // txtPublish
             // 
-            this.txtPublish.Location = new System.Drawing.Point(66, 146);
+            this.txtPublish.Location = new System.Drawing.Point(83, 201);
             this.txtPublish.Name = "txtPublish";
             this.txtPublish.Size = new System.Drawing.Size(75, 23);
             this.txtPublish.TabIndex = 3;
@@ -63,18 +63,19 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(209, 146);
+            this.btnCancel.Location = new System.Drawing.Point(209, 201);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // PublishForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 182);
+            this.ClientSize = new System.Drawing.Size(395, 236);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtPublish);
             this.Controls.Add(this.txtMessage);

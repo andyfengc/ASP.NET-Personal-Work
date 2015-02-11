@@ -40,7 +40,7 @@
             // chkEmail
             // 
             this.chkEmail.AutoSize = true;
-            this.chkEmail.Location = new System.Drawing.Point(28, 53);
+            this.chkEmail.Location = new System.Drawing.Point(28, 43);
             this.chkEmail.Name = "chkEmail";
             this.chkEmail.Size = new System.Drawing.Size(133, 17);
             this.chkEmail.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(167, 53);
+            this.txtEmail.Location = new System.Drawing.Point(167, 41);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(184, 20);
             this.txtEmail.TabIndex = 1;
@@ -57,7 +57,7 @@
             // chkMobile
             // 
             this.chkMobile.AutoSize = true;
-            this.chkMobile.Location = new System.Drawing.Point(28, 92);
+            this.chkMobile.Location = new System.Drawing.Point(28, 82);
             this.chkMobile.Name = "chkMobile";
             this.chkMobile.Size = new System.Drawing.Size(139, 17);
             this.chkMobile.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(167, 92);
+            this.txtMobile.Location = new System.Drawing.Point(167, 82);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(184, 20);
             this.txtMobile.TabIndex = 3;
@@ -89,6 +89,7 @@
             this.btnUnsubscribe.TabIndex = 5;
             this.btnUnsubscribe.Text = "Unsubscribe";
             this.btnUnsubscribe.UseVisualStyleBackColor = true;
+            this.btnUnsubscribe.Click += new System.EventHandler(this.btnUnsubscribe_Click);
             // 
             // btnCancel
             // 
@@ -98,6 +99,7 @@
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // SubscribeForm
             // 

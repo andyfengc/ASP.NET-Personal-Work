@@ -12,16 +12,25 @@ namespace Delegate
 {
     public partial class PublishForm : Form
     {
-        private delegate void ...// like list instance in java observer pattern
-        
-        public PublishForm()
+        private MainForm server;
+
+        public PublishForm(MainForm server)
         {
             InitializeComponent();
+            this.server = server;
         }
 
         private void txtPublish_Click(object sender, EventArgs e)
         {
-            // call delegate object.Invoke()
+            // get message
+            string message = txtMessage.Text;
+            // publish message through server
+            server.Publish(message);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
