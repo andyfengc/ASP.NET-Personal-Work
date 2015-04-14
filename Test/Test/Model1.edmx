@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="AMSModelStoreContainer">
+          <EntitySet Name="Account" EntityType="AMSModel.Store.Account" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Client" EntityType="AMSModel.Store.Client" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Login" EntityType="AMSModel.Store.Login" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Payee" EntityType="AMSModel.Store.Payee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Payment" EntityType="AMSModel.Store.Payment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="AMSModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Account_Client" Association="AMSModel.Store.FK_Account_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Login_Client" Association="AMSModel.Store.FK_Login_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Login" EntitySet="Login" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payment_Client" Association="AMSModel.Store.FK_Payment_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Payment" EntitySet="Payment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payment_Payee" Association="AMSModel.Store.FK_Payment_Payee">
+            <End Role="Payee" EntitySet="Payee" />
+            <End Role="Payment" EntitySet="Payment" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ClientID" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="AccountType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Balance" Type="decimal" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="AccessID" />
+          </Key>
+          <Property Name="AccessID" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="Firstname" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Lastname" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Middlename" Type="varchar" MaxLength="30" />
+          <Property Name="Postaladdr" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="13" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="AccessID" />
+          </Key>
+          <Property Name="AccessID" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="Payee">
+          <Key>
+            <PropertyRef Name="PayeeID" />
+          </Key>
+          <Property Name="PayeeID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="ClientID" />
+            <PropertyRef Name="PayeeID" />
+            <PropertyRef Name="AccountNumber" />
+            <PropertyRef Name="BillingDate" />
+          </Key>
+          <Property Name="ClientID" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="PayeeID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="AccountNumber" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Amount" Type="decimal" Nullable="false" />
+          <Property Name="BillingDate" Type="date" Nullable="false" />
+          <Property Name="PaymentDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Account_Client">
+          <End Role="Client" Type="AMSModel.Store.Client" Multiplicity="1" />
+          <End Role="Account" Type="AMSModel.Store.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="AccessID" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Login_Client">
+          <End Role="Client" Type="AMSModel.Store.Client" Multiplicity="1" />
+          <End Role="Login" Type="AMSModel.Store.Login" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="AccessID" />
+            </Principal>
+            <Dependent Role="Login">
+              <PropertyRef Name="AccessID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payment_Client">
+          <End Role="Client" Type="AMSModel.Store.Client" Multiplicity="1" />
+          <End Role="Payment" Type="AMSModel.Store.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="AccessID" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payment_Payee">
+          <End Role="Payee" Type="AMSModel.Store.Payee" Multiplicity="1" />
+          <End Role="Payment" Type="AMSModel.Store.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payee">
+              <PropertyRef Name="PayeeID" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="PayeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AMSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AMSEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="AMSModel.Account" />
+          <EntitySet Name="Clients" EntityType="AMSModel.Client" />
+          <EntitySet Name="Logins" EntityType="AMSModel.Login" />
+          <EntitySet Name="Payees" EntityType="AMSModel.Payee" />
+          <EntitySet Name="Payments" EntityType="AMSModel.Payment" />
+          <EntitySet Name="sysdiagrams" EntityType="AMSModel.sysdiagram" />
+          <AssociationSet Name="FK_Account_Client" Association="AMSModel.FK_Account_Client">
+            <End Role="Client" EntitySet="Clients" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Login_Client" Association="AMSModel.FK_Login_Client">
+            <End Role="Client" EntitySet="Clients" />
+            <End Role="Login" EntitySet="Logins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payment_Client" Association="AMSModel.FK_Payment_Client">
+            <End Role="Client" EntitySet="Clients" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payment_Payee" Association="AMSModel.FK_Payment_Payee">
+            <End Role="Payee" EntitySet="Payees" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ClientID" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="AccountType" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Balance" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="Client" Relationship="AMSModel.FK_Account_Client" FromRole="Account" ToRole="Client" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="AccessID" />
+          </Key>
+          <Property Name="AccessID" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="Firstname" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Lastname" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Middlename" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Postaladdr" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Accounts" Relationship="AMSModel.FK_Account_Client" FromRole="Client" ToRole="Account" />
+          <NavigationProperty Name="Login" Relationship="AMSModel.FK_Login_Client" FromRole="Client" ToRole="Login" />
+          <NavigationProperty Name="Payments" Relationship="AMSModel.FK_Payment_Client" FromRole="Client" ToRole="Payment" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="AccessID" />
+          </Key>
+          <Property Name="AccessID" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Client" Relationship="AMSModel.FK_Login_Client" FromRole="Login" ToRole="Client" />
+        </EntityType>
+        <EntityType Name="Payee">
+          <Key>
+            <PropertyRef Name="PayeeID" />
+          </Key>
+          <Property Name="PayeeID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Payments" Relationship="AMSModel.FK_Payment_Payee" FromRole="Payee" ToRole="Payment" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="ClientID" />
+            <PropertyRef Name="PayeeID" />
+            <PropertyRef Name="AccountNumber" />
+            <PropertyRef Name="BillingDate" />
+          </Key>
+          <Property Name="ClientID" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="PayeeID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="AccountNumber" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="BillingDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PaymentDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Client" Relationship="AMSModel.FK_Payment_Client" FromRole="Payment" ToRole="Client" />
+          <NavigationProperty Name="Payee" Relationship="AMSModel.FK_Payment_Payee" FromRole="Payment" ToRole="Payee" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Account_Client">
+          <End Role="Client" Type="AMSModel.Client" Multiplicity="1" />
+          <End Role="Account" Type="AMSModel.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="AccessID" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Login_Client">
+          <End Role="Client" Type="AMSModel.Client" Multiplicity="1" />
+          <End Role="Login" Type="AMSModel.Login" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="AccessID" />
+            </Principal>
+            <Dependent Role="Login">
+              <PropertyRef Name="AccessID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payment_Client">
+          <End Role="Client" Type="AMSModel.Client" Multiplicity="1" />
+          <End Role="Payment" Type="AMSModel.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="AccessID" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payment_Payee">
+          <End Role="Payee" Type="AMSModel.Payee" Multiplicity="1" />
+          <End Role="Payment" Type="AMSModel.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payee">
+              <PropertyRef Name="PayeeID" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="PayeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AMSModelStoreContainer" CdmEntityContainer="AMSEntities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="AMSModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="AMSModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="AccessID" ColumnName="AccessID" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Middlename" ColumnName="Middlename" />
+                <ScalarProperty Name="Postaladdr" ColumnName="Postaladdr" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="AMSModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="AccessID" ColumnName="AccessID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payees">
+            <EntityTypeMapping TypeName="AMSModel.Payee">
+              <MappingFragment StoreEntitySet="Payee">
+                <ScalarProperty Name="PayeeID" ColumnName="PayeeID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payments">
+            <EntityTypeMapping TypeName="AMSModel.Payment">
+              <MappingFragment StoreEntitySet="Payment">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="PayeeID" ColumnName="PayeeID" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="BillingDate" ColumnName="BillingDate" />
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AMSModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,10 @@
+D:\WORK\Workspace\COMP212\BallAndFace\bin\Debug\BallAndFace.exe
+D:\WORK\Workspace\COMP212\BallAndFace\bin\Debug\BallAndFace.exe.config
+D:\WORK\Workspace\COMP212\BallAndFace\obj\Debug\BallAndFace.Form1.resources
+D:\WORK\Workspace\COMP212\BallAndFace\obj\Debug\BallAndFace.Properties.Resources.resources
+D:\WORK\Workspace\COMP212\BallAndFace\obj\Debug\BallAndFace.csproj.GenerateResource.Cache
+D:\WORK\Workspace\COMP212\BallAndFace\obj\Debug\BallAndFace.exe
+D:\WORK\Workspace\COMP212\BallAndFace\obj\Debug\BallAndFace.pdb
+D:\WORK\Workspace\COMP212\BallAndFace\bin\Debug\BallAndFace.pdb
+D:\WORK\Workspace\COMP212\BallAndFace\obj\Debug\BallAndFace.AnimateBall.resources
+D:\WORK\Workspace\COMP212\BallAndFace\obj\Debug\BallAndFace.AnimateFace.resources

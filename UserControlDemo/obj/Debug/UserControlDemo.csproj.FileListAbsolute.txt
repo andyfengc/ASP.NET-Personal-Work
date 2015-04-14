@@ -1,0 +1,6 @@
+D:\WORK\Workspace\COMP212\UserControlDemo\bin\Debug\UserControlDemo.dll
+D:\WORK\Workspace\COMP212\UserControlDemo\bin\Debug\UserControlDemo.pdb
+D:\WORK\Workspace\COMP212\UserControlDemo\obj\Debug\UserControlDemo.ClockUserControl.resources
+D:\WORK\Workspace\COMP212\UserControlDemo\obj\Debug\UserControlDemo.csproj.GenerateResource.Cache
+D:\WORK\Workspace\COMP212\UserControlDemo\obj\Debug\UserControlDemo.dll
+D:\WORK\Workspace\COMP212\UserControlDemo\obj\Debug\UserControlDemo.pdb

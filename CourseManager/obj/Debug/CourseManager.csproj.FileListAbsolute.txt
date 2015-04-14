@@ -1,0 +1,8 @@
+D:\WORK\Workspace\COMP212\CourseManager\bin\Debug\CourseManager.exe.config
+D:\WORK\Workspace\COMP212\CourseManager\bin\Debug\CourseManager.exe
+D:\WORK\Workspace\COMP212\CourseManager\bin\Debug\CourseManager.pdb
+D:\WORK\Workspace\COMP212\CourseManager\obj\Debug\CourseManager.Properties.Resources.resources
+D:\WORK\Workspace\COMP212\CourseManager\obj\Debug\CourseManager.Utils.CourseManagerForm.resources
+D:\WORK\Workspace\COMP212\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache
+D:\WORK\Workspace\COMP212\CourseManager\obj\Debug\CourseManager.exe
+D:\WORK\Workspace\COMP212\CourseManager\obj\Debug\CourseManager.pdb

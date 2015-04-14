@@ -1,0 +1,10 @@
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\bin\Debug\Books.mdf
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\bin\Debug\Books_log.ldf
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\bin\Debug\EntitySampleExistingDatabase.dll.config
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\bin\Debug\EntitySampleExistingDatabase.dll
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\bin\Debug\EntitySampleExistingDatabase.pdb
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\bin\Debug\EntityFramework.dll
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\bin\Debug\EntityFramework.xml
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\obj\Debug\EntitySampleExistingDatabase.dll
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\obj\Debug\EntitySampleExistingDatabase.pdb
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabase\obj\Debug\EntitySampleExistingDatabase.csprojResolveAssemblyReference.cache

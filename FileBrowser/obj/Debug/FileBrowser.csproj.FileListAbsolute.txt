@@ -1,0 +1,9 @@
+D:\WORK\Workspace\COMP212\FileBrowser\bin\Debug\FileBrowser.exe.config
+D:\WORK\Workspace\COMP212\FileBrowser\bin\Debug\FileBrowser.exe
+D:\WORK\Workspace\COMP212\FileBrowser\bin\Debug\FileBrowser.pdb
+D:\WORK\Workspace\COMP212\FileBrowser\obj\Debug\FileBrowser.FileBrowserForm.resources
+D:\WORK\Workspace\COMP212\FileBrowser\obj\Debug\FileBrowser.Properties.Resources.resources
+D:\WORK\Workspace\COMP212\FileBrowser\obj\Debug\FileBrowser.View.FileBrowserFormV2.resources
+D:\WORK\Workspace\COMP212\FileBrowser\obj\Debug\FileBrowser.csproj.GenerateResource.Cache
+D:\WORK\Workspace\COMP212\FileBrowser\obj\Debug\FileBrowser.exe
+D:\WORK\Workspace\COMP212\FileBrowser\obj\Debug\FileBrowser.pdb

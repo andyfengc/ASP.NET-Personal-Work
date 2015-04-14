@@ -1,0 +1,5 @@
+D:\WORK\Workspace\COMP212\ThreadDemo\bin\Debug\ThreadDemo.exe.config
+D:\WORK\Workspace\COMP212\ThreadDemo\bin\Debug\ThreadDemo.exe
+D:\WORK\Workspace\COMP212\ThreadDemo\bin\Debug\ThreadDemo.pdb
+D:\WORK\Workspace\COMP212\ThreadDemo\obj\Debug\ThreadDemo.exe
+D:\WORK\Workspace\COMP212\ThreadDemo\obj\Debug\ThreadDemo.pdb

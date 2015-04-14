@@ -1,0 +1,11 @@
+D:\WORK\Workspace\COMP212\UserControlTestForm\bin\Debug\UserControlTestForm.exe.config
+D:\WORK\Workspace\COMP212\UserControlTestForm\bin\Debug\UserControlTestForm.exe
+D:\WORK\Workspace\COMP212\UserControlTestForm\bin\Debug\UserControlTestForm.pdb
+D:\WORK\Workspace\COMP212\UserControlTestForm\bin\Debug\UserControlDemo.dll
+D:\WORK\Workspace\COMP212\UserControlTestForm\bin\Debug\UserControlDemo.pdb
+D:\WORK\Workspace\COMP212\UserControlTestForm\obj\Debug\UserControlTestForm.csprojResolveAssemblyReference.cache
+D:\WORK\Workspace\COMP212\UserControlTestForm\obj\Debug\UserControlTestForm.Form1.resources
+D:\WORK\Workspace\COMP212\UserControlTestForm\obj\Debug\UserControlTestForm.Properties.Resources.resources
+D:\WORK\Workspace\COMP212\UserControlTestForm\obj\Debug\UserControlTestForm.csproj.GenerateResource.Cache
+D:\WORK\Workspace\COMP212\UserControlTestForm\obj\Debug\UserControlTestForm.exe
+D:\WORK\Workspace\COMP212\UserControlTestForm\obj\Debug\UserControlTestForm.pdb

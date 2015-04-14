@@ -1,0 +1,7 @@
+D:\WORK\Workspace\COMP212\Test\Test\bin\Debug\Test.exe.config
+D:\WORK\Workspace\COMP212\Test\Test\bin\Debug\Test.exe
+D:\WORK\Workspace\COMP212\Test\Test\bin\Debug\Test.pdb
+D:\WORK\Workspace\COMP212\Test\Test\obj\Debug\Test.exe
+D:\WORK\Workspace\COMP212\Test\Test\obj\Debug\Test.pdb
+D:\WORK\Workspace\COMP212\Test\Test\bin\Debug\EntityFramework.dll
+D:\WORK\Workspace\COMP212\Test\Test\bin\Debug\EntityFramework.xml

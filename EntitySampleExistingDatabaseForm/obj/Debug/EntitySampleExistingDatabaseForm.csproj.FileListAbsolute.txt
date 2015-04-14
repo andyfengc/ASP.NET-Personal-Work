@@ -1,0 +1,17 @@
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\Books.mdf
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\Books_log.ldf
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\EntitySampleExistingDatabaseForm.exe.config
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\EntitySampleExistingDatabaseForm.exe
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\EntitySampleExistingDatabaseForm.pdb
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\EntityFramework.dll
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\EntityFramework.SqlServer.dll
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\EntitySampleExistingDatabase.dll
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\EntitySampleExistingDatabase.pdb
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\EntityFramework.xml
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\bin\Debug\EntityFramework.SqlServer.xml
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\obj\Debug\EntitySampleExistingDatabaseForm.csprojResolveAssemblyReference.cache
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\obj\Debug\EntitySampleExistingDatabaseForm.Form1.resources
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\obj\Debug\EntitySampleExistingDatabaseForm.Properties.Resources.resources
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\obj\Debug\EntitySampleExistingDatabaseForm.csproj.GenerateResource.Cache
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\obj\Debug\EntitySampleExistingDatabaseForm.exe
+D:\WORK\Workspace\COMP212\EntitySampleExistingDatabaseForm\obj\Debug\EntitySampleExistingDatabaseForm.pdb

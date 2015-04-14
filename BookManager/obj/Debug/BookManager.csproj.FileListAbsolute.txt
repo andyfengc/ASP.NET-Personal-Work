@@ -1,0 +1,15 @@
+D:\WORK\Workspace\COMP212\BookManager\bin\Debug\Books.mdf
+D:\WORK\Workspace\COMP212\BookManager\bin\Debug\Books_log.ldf
+D:\WORK\Workspace\COMP212\BookManager\bin\Debug\BookManager.exe.config
+D:\WORK\Workspace\COMP212\BookManager\bin\Debug\BookManager.exe
+D:\WORK\Workspace\COMP212\BookManager\bin\Debug\BookManager.pdb
+D:\WORK\Workspace\COMP212\BookManager\bin\Debug\EntityFramework.dll
+D:\WORK\Workspace\COMP212\BookManager\bin\Debug\EntityFramework.SqlServer.dll
+D:\WORK\Workspace\COMP212\BookManager\bin\Debug\EntityFramework.xml
+D:\WORK\Workspace\COMP212\BookManager\bin\Debug\EntityFramework.SqlServer.xml
+D:\WORK\Workspace\COMP212\BookManager\obj\Debug\BookManager.BookManagerForm.resources
+D:\WORK\Workspace\COMP212\BookManager\obj\Debug\BookManager.Properties.Resources.resources
+D:\WORK\Workspace\COMP212\BookManager\obj\Debug\BookManager.csproj.GenerateResource.Cache
+D:\WORK\Workspace\COMP212\BookManager\obj\Debug\BookManager.exe
+D:\WORK\Workspace\COMP212\BookManager\obj\Debug\BookManager.pdb
+D:\WORK\Workspace\COMP212\BookManager\obj\Debug\BookManager.csprojResolveAssemblyReference.cache

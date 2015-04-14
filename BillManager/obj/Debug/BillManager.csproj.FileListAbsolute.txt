@@ -1,0 +1,17 @@
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\BillManager.exe.config
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\BillManager.exe
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\BillManager.pdb
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\LoginPasswordUserControl.dll
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\LoginUserControlLibrary.dll
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\LoginPasswordUserControl.pdb
+D:\WORK\Workspace\COMP212\BillManager\obj\Debug\BillManager.csprojResolveAssemblyReference.cache
+D:\WORK\Workspace\COMP212\BillManager\obj\Debug\BillManager.LoginForm.resources
+D:\WORK\Workspace\COMP212\BillManager\obj\Debug\BillManager.Properties.Resources.resources
+D:\WORK\Workspace\COMP212\BillManager\obj\Debug\BillManager.csproj.GenerateResource.Cache
+D:\WORK\Workspace\COMP212\BillManager\obj\Debug\BillManager.exe
+D:\WORK\Workspace\COMP212\BillManager\obj\Debug\BillManager.pdb
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\EntityFramework.dll
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\EntityFramework.SqlServer.dll
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\EntityFramework.xml
+D:\WORK\Workspace\COMP212\BillManager\bin\Debug\EntityFramework.SqlServer.xml
+D:\WORK\Workspace\COMP212\BillManager\obj\Debug\BillManager.PaymentForm.resources
